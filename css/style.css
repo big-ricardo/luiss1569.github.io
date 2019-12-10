@@ -634,6 +634,14 @@ body {
 	margin: 0 auto;
 	font-size: 1em;
 }
+.tm-head-point{
+	width: 75%;
+	margin: 3.3em auto 2.3em auto;
+	display: flex;
+	flex: 1;
+	align-items: center;
+	justify-content: center;
+}
 /*---//team-members--*/
 /*----team-info----*/
 .team-info{
@@ -643,7 +651,10 @@ body {
 	font-size: 1em;
 	line-height: 1.8em;
 	text-align: center;
-	width: 60%;
+	width: 80%;
+}
+.team-info strong{
+	font-weight: bold;
 }
 /*--//team-info--*/
 .top-social-icons li{
@@ -655,14 +666,20 @@ body {
 	height:40px;
 	display:block;
 }
-.twitter{
-	background:url(../images/top-social-icons.png) no-repeat -4px -2px;
+.gmail{
+	background:url(../images/gmail.png) no-repeat;
+	background-size: cover;
 }
 .facebook{
 	background: url(../images/top-social-icons.png) no-repeat -54px -2px;
 }
-.pin{
-	background: url(../images/top-social-icons.png) no-repeat -104px -2px;
+.git{
+	background: url(../images/git.png) no-repeat ;
+	background-size: cover;
+}
+.insta{
+	background: url(../images/insta.png) no-repeat ;
+	background-size: cover;
 }
 /*--------social simptip--------*/
 [data-tooltip] {
@@ -1042,7 +1059,7 @@ display:none;
 	.bottom-social-icons {
 		width: 30%;
 	}
-	.tm-head-grids {
+	.tm-head-grids, .tm-head-point {
 		width: 90%;
 	}
 }
@@ -1093,7 +1110,10 @@ display:none;
 		text-align: left;
 	}
 	.tm-head-grid h4 {
-		font-size: 1em;
+		font-size: 2em;
+	}
+	.tm-head-point{
+		width: 95%;
 	}
 	.tm-head-grid h5 {
 		font-size: 0.82355em;
@@ -1102,7 +1122,9 @@ display:none;
 		margin: 1.2em 0em;
 	}
 	.team-info {
-		font-size: 0.82355em;
+		font-size: 1em;
+		width: 95%;
+		
 	}
 	.form textarea {
 		width: 45%;
