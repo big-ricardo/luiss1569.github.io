@@ -105,17 +105,17 @@
         <div class="da-slide">
           <p>Deseja fazer algum projeto?!</p>
           <h2>Olhe alguns trabalhos!</h2>
-          <p class="a"><a href="#portfolio">CLIQUE AQUI</a></p>
+          <p class="a"><a href="#portfolio" class="scroll">CLIQUE AQUI</a></p>
         </div>
         <div class="da-slide">
           <p>Quem sou eu?</p>
           <h2>Descubra aqui!</h2>
-          <p class="a"><a href="#about">QUEM SOU EU!</a></p>
+          <p class="a"><a href="#about" class="scroll">QUEM SOU EU!</a></p>
         </div>
         <div class="da-slide">
           <p>Fale Comigo!</p>
           <h2>Vamos se conhecer!</h2>
-          <p class="a"><a href="#contact">CLIQUE AQUI!</a></p>
+          <p class="a"><a href="#contact" class="scroll">CLIQUE AQUI!</a></p>
         </div>
         <nav class="da-arrows">
           <span class="da-arrows-prev"></span>
@@ -212,7 +212,7 @@
           <h4><a href="#">ChatBot</a></h4>
           <p>Inteligência Artificial</p>
         </div>
-        <div class="col_1_of_3 span_1_of_3">
+        <div class="col_1_of_3 span_1_of_3 meio">
           <div class="view view-fourth">
             <img src="images/port3.jpg" />
             <div class="mask">
@@ -235,7 +235,8 @@
             <div class="mask">
               <h2>Site Pessoal</h2>
               <p>
-                Este site desenvolvido para minha divulgação pessoal, ultilizando uma forma prática e dinâmica de estilos e efeitos.
+                Este site desenvolvido para minha divulgação pessoal,
+                ultilizando uma forma prática e dinâmica de estilos e efeitos.
               </p>
               <a href="#" class="info">Read More</a>
             </div>
@@ -259,7 +260,7 @@
           <h4><a href="#">Tree House Template</a></h4>
           <p>Web Design</p>
         </div>
-        <div class="col_1_of_3 span_1_of_3">
+        <div class="col_1_of_3 span_1_of_3 meio">
           <div class="view view-fourth">
             <img src="images/port6.jpg" />
             <div class="mask">
@@ -287,7 +288,7 @@
           falta seja sentida." Bob Marley
         </p>
         -start-about-time-line---->
-        <!--<div class="about-time-line">
+    <!--<div class="about-time-line">
           <li>
             <div class="cbp_tmicon img1"></div>
             <div class="cbp_tmlabel">
@@ -343,7 +344,7 @@
     </div> -->
     <!---//end-about---->
     <!----start-team-members---->
-    <div class="team-members">
+    <div class="team-members" id="about">
       <div class="wrap">
         <div class="tm-head">
           <h3>Um pouco sobre mim!</h3>
@@ -542,7 +543,9 @@
     <div class="contact" id="contact">
       <div class="wrap">
         <h3>Fale Comigo</h3>
-        <p class="a">"Pra que Indireta? O Bonito é Falar na Cara!" Gabriela Lopes</p>
+        <p class="a">
+          "Pra que Indireta? O Bonito é Falar na Cara!" Gabriela Lopes
+        </p>
         <div class="form">
           <div class="form-text">
             <input
@@ -585,8 +588,8 @@
           <input type="submit" value="SEND MESSAGE" onClick="mensagem()" />
         </div>
       </div>
-      <div class="menEnv active">
-        <img src="images/mensagemEnvpng.png">
+      <div class="menEnv active some">
+        <img src="images/mensagemEnvpng.png" />
         <h3>Mensagem Enviada!</h3>
       </div>
     </div>
@@ -600,11 +603,42 @@
         </div>
         <div class="bottom-footer-center">
           <ul class="bottom-social-icons">
-            <li><a class="bottom-twitter" href="#"> </a></li>
-            <li><a class="bottom-facebook" href="#"> </a></li>
-            <li><a class="bottom-pin" href="#"> </a></li>
-            <li><a class="bottom-google" href="#"> </a></li>
-            <div class="clear"></div>
+            <li>
+              <a
+                class="facebook simptip-position-bottom simptip-movable"
+                data-tooltip="Facebook"
+                target="_blank"
+                href="https://www.facebook.com/LuisRicardo1569"
+              >
+              </a>
+            </li>
+            <li>
+              <a
+                class="git simptip-position-bottom simptip-movable"
+                data-tooltip="GitHub"
+                target="_blank"
+                href="https://github.com/luiss1569"
+              >
+              </a>
+            </li>
+            <li>
+              <a
+                class="gmail simptip-position-bottom simptip-movable"
+                data-tooltip="Email"
+                target="_blank"
+                href="mailto:luisricardo0626@gmail.com"
+              >
+              </a>
+            </li>
+            <li>
+              <a
+                class="insta simptip-position-bottom simptip-movable"
+                data-tooltip="Instagram"
+                target="_blank"
+                href="https://www.instagram.com/luisricar_do/"
+              >
+              </a>
+            </li>
           </ul>
         </div>
         <div class="clear"></div>
@@ -651,13 +685,17 @@
           alert("Preencha todos os campos");
         } else {
           //const response = await axios.post('https://getjobserver.herokuapp.com/fale', {nome,email,cidade,mensagem})
-          if(true){
-            alert("Mensagem Enviada!")
-            document.querySelector('.form').classList.add("active");
-            document.querySelector('.menEnv').classList.remove("active");
-
-          }else{
-            alert("Mensagem não Enviada!")
+          if (true) {
+            document.querySelector(".form").classList.add("active")
+            setTimeout(() => {
+              document.querySelector('.menEnv').classList.remove("some")
+              document.querySelector(".form").classList.add("some")
+            }, 1000);
+            setTimeout(() => {
+              document.querySelector(".menEnv").classList.remove("active")
+            }, 1500);
+          } else {
+            alert("Mensagem não Enviada!");
           }
         }
       }

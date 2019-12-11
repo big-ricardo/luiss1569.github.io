@@ -320,7 +320,7 @@ body {
    opacity: 1;
 }
 
-::-webkit-scrollbar {
+::-webkit-bar {
 	width: 1px;
 	background: #050505;
   }
@@ -859,9 +859,11 @@ display:none;
 .form {
 	margin-top: 3em;
 	padding: 15px;
-	border-radius: 10px;
+	border-radius: 10px; 
 	-webkit-border-radius:10px;
-    -moz-border-radius:10px;
+	-moz-border-radius:10px;
+	opacity: 1;
+    transition: opacity .5s linear;
 }
 .form-text input[type="text"]{
 	font-size:0.8755em;
@@ -975,7 +977,7 @@ display:none;
 	background:url(../images/top-social-icons.png) no-repeat -152px 0px;
 }
 .bottom-social-icons {
-	width: 19%;
+	width: 19%; 
 	margin: 0 auto;
 }
 /*---End-footer----*/
@@ -1080,6 +1082,9 @@ display:none;
 	
 	.wrap{
 		width:95%;
+	}
+	.meio{
+		margin-left: 25%;
 	}
 	.services h3, .portfolio h3, .about h3, .tm-head h3, .contact h3 {
 		font-size: 1.5em;
@@ -1283,5 +1288,11 @@ display:none;
 }
 
 .active{
+	opacity: 0;
+	pointer-events: none;
+	margin-top: 300px;
+}
+
+.some{
 	display: none;
 }
