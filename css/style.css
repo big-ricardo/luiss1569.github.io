@@ -294,7 +294,7 @@ body {
 }
 .view a.info {
    display: inline-block;
-   text-decoration: none;
+   text-decoration: none; 
    padding: 7px 14px;
    background: #FED136;
    color: #fff;

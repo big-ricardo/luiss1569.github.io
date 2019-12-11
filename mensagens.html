@@ -1,0 +1,58 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="container-fluid">
+    <div class="root"></div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript">
+      let mensagens = [];
+      window.onload = () => {
+        pegaMens();
+      };
+
+      async function pegaMens() {
+        const response = await axios.get(
+          "https://getjobserver.herokuapp.com/falei"
+        );
+        if (response) {
+          mensagens = response.data;
+          await renderizaMens();
+          var objDiv = document.querySelector("body");
+          objDiv.scrollTop = objDiv.scrollHeight;
+        }
+      }
+
+      async function renderizaMens() {
+        let html =
+          '<table class="table table-responsive"><thead class="thead-dark fixed"><tr class="kk"><th scope="col">#</th><th scope="col">Nome</th>';
+        html +=
+          '<th scope="col">Email</th><th scope="col">Cidade</th><th scope="col">Mensagem</th></tr></thead>';
+        let cont = mensagens.length;
+        html += "<tbody>";
+        console.log(mensagens);
+        mensagens.map(mensagem => {
+          mensagem.cod = mensagens.length - cont;
+          cont--;
+          html += "<tr>";
+          html += `<th scope="row">${mensagem.cod}</th>`;
+          html += `<td>${mensagem.nome}</td>`;
+          html += `<td>${mensagem.email}</td>`;
+          html += `<td>${mensagem.cidade}</td>`;
+          html += `<td>${mensagem.mensagem}</td>`;
+          html += "</tr>";
+        });
+        html += "</tbody>";
+        html += "</table>";
+        document.querySelector(".root").innerHTML = html;
+
+        return 0;
+      }
+    </script>
+  </body>
+</html>

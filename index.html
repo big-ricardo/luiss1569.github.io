@@ -126,12 +126,22 @@
     </div>
 
     <div class="services" id="services">
-      <div class="wrap">
+      <div class="wrap scol">
         <h3>SERVIÇOS</h3>
         <p>
           "Sabedoria é saber o que fazer; habilidade é saber como fazer; virtude
           é fazer". David Starr Jordan
         </p>
+        <div class="col_1_of_3 span_1_of_3">
+          <img src="images/service1.png" alt="" />
+          <h4><a href="#">Sistemas de Gestão</a></h4>
+          <p>
+            Criação de softwares de automação, controle de estoque e fins onde
+            diminui os esforços operacionais e auxilie na tomada de decisão,
+            proporcinando segurança quanto a confiabilidade de seus dados entre
+            outros!
+          </p>
+        </div>
         <div class="col_1_of_3 span_1_of_3">
           <img src="images/service2.png" alt="" />
           <h4><a href="#">Desenvolvimento Web</a></h4>
@@ -147,16 +157,6 @@
             Serviços de criação de apps mobile, que trabalham sozinhos ou em
             conjunto com seu site, para facilitar a vida, segurança e a
             experiência do usuário ao ultilizar seu serviço!
-          </p>
-        </div>
-        <div class="col_1_of_3 span_1_of_3">
-          <img src="images/service1.png" alt="" />
-          <h4><a href="#">Sistemas de Gestão</a></h4>
-          <p>
-            Criação de softwares de automação, controle de estoque e fins onde
-            diminui os esforços operacionais e auxilie na tomada de decisão,
-            proporcinando segurança quanto a confiabilidade de seus dados entre
-            outros!
           </p>
         </div>
         <div class="clear"></div>
@@ -664,41 +664,6 @@
       ><span id="toTopHover" style="opacity: 1;"></span
     ></a>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script type="text/javascript">
-      async function mensagem() {
-        let nome = document.getElementsByName("Nome")[0].value;
-        console.log("a", nome);
-        let email = document.getElementsByName("Email")[0].value;
-        console.log("b", email);
-        let cidade = document.getElementsByName("Cidade")[0].value;
-        console.log("d", cidade);
-        let mensagem = document.getElementsByName("Mensagem")[0].value;
-        console.log("e", mensagem);
-
-        if (
-          email == "E-mail*" ||
-          nome == "Seu Nome*" ||
-          cidade == "Cidade*" ||
-          mensagem == "" ||
-          mensagem == "Mensagem"
-        ) {
-          alert("Preencha todos os campos");
-        } else {
-          //const response = await axios.post('https://getjobserver.herokuapp.com/fale', {nome,email,cidade,mensagem})
-          if (true) {
-            document.querySelector(".form").classList.add("active")
-            setTimeout(() => {
-              document.querySelector('.menEnv').classList.remove("some")
-              document.querySelector(".form").classList.add("some")
-            }, 1000);
-            setTimeout(() => {
-              document.querySelector(".menEnv").classList.remove("active")
-            }, 1500);
-          } else {
-            alert("Mensagem não Enviada!");
-          }
-        }
-      }
-    </script>
+    <script type="text/javascript" src="./js/falecmg.js"></script>
   </body>
 </html>
