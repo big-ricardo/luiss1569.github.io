@@ -31,7 +31,7 @@ body {
 }
 .header{
 	padding:5% 0%;
-	margin-bottom: 1%;
+	margin-bottom: -100px;
 }
 .logo{
 	float:left;
@@ -42,6 +42,7 @@ body {
 }
 .menu{
 	float: left;
+	margin-bottom: -210px;
 }
 .menu li{
 	float: left;
@@ -618,7 +619,7 @@ body {
 }
 .tm-head-grids {
 	width: 75%;
-	margin: 3.3em auto 2.3em auto;
+	margin: 3.3em auto 2.3em auto;  margin-bottom: ;
 }
 .tm-head-grid:nth-child(3){
 	margin-right:0;
