@@ -619,7 +619,7 @@ body {
 }
 .tm-head-grids {
 	width: 75%;
-	margin: 3.3em auto 2.3em auto;  margin-bottom: ;
+	margin: 3.3em auto 2.3em auto;
 }
 .tm-head-grid:nth-child(3){
 	margin-right:0;
@@ -1296,4 +1296,9 @@ display:none;
 
 .some{
 	display: none;
+}
+
+::-webkit-scrollbar {
+    width: 1px;
+    background: #f5f5f5 !important;
 }
