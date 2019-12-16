@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <meta charset="utf-8" />
+    <title>Game Snake</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="container-flud">
+    <div id="game-container">
+      <div id="control" class="some">
+        <button onClick="down()">top</button>
+        <div style="display: flex; flex: 1; flex-direction: row;">
+            <button onClick="left()">left</button>
+            <button onClick="rigth()">right</button>
+        </div>
+        <button onClick="botton()">botton</button>
+      </div>
+      <div class="points">Pontos: 0</div>
+      <button id='play'onClick="play()">Play</button>
+      <canvas id="game-canvas" width="30" height="30"></canvas>
+    </div>
+    <script src="game.js"></script>
+    <script type="text/javascript">
+      function down(){
+             let e
+              e = {key: 'ArrowUp'}
+              handleKeydown(e)
+      }
+      function left(){
+             let e
+              e = {key: 'ArrowLeft'}
+              handleKeydown(e)
+      }
+      function botton(){
+             let e
+              e = {key: 'ArrowDown'}
+              handleKeydown(e)
+      }
+      function rigth(){
+             let e
+              e = {key: 'ArrowRight'}
+              handleKeydown(e)
+      }
+
+      function play(){
+          document.getElementById('play').classList.add('some')
+          main()
+      }
+    </script>
+  </body>
+</html>

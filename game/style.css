@@ -1,0 +1,60 @@
+body {
+    margin: 10px auto 0;
+    width: 100%;
+    padding: 0;
+    background-color: #EEE;
+    text-align: center;
+}
+#game-container{
+    display: flex;
+    flex: 1;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.points{
+    font-size: 2em;
+}
+#game-canvas {
+    width: 500px;
+    height: 500px;
+    border: 2px solid black;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    image-rendering: -moz-crisp-edges;
+    -webkit-box-shadow: 0px 4px 17px 0px rgba(0,0,0,0.19);
+    -moz-box-shadow: 0px 4px 17px 0px rgba(0,0,0,0.19);
+    box-shadow: 0px 4px 17px 0px rgba(0,0,0,0.19);
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: inline-block;
+    vertical-align: top;
+    background-color: #f5f5f5;
+}
+
+#control{
+    margin-top: 10%;
+}
+
+.some{
+    display: none;
+}
+
+.canvasGame{
+    width: 800px;
+}
+
+button{
+    width: 100px;
+    height: 80px;
+    border: 2px solid teal;
+    border-radius: 100px;
+    margin: -10px 40px ;
+    font-size: 1.5em;
+}
+
+#play{
+    width: auto;
+    height: auto;
+}
