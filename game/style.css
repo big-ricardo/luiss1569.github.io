@@ -13,11 +13,11 @@ body {
     align-items: center;
 }
 .points{
-    font-size: 2em;
+    font-size: 3em;
 }
-#game-canvas {
-    width: 500px;
-    height: 500px;
+
+.canvas{
+    width: 90%;
     border: 2px solid black;
     image-rendering: pixelated;
     image-rendering: crisp-edges;
@@ -46,15 +46,35 @@ body {
 }
 
 button{
-    width: 100px;
-    height: 80px;
+    width: 250px;
+    height: 150px;
     border: 2px solid teal;
     border-radius: 100px;
-    margin: -10px 40px ;
-    font-size: 1.5em;
+    margin: -10px 60px ;
+    font-size: 3em;
 }
+
+button:focus{
+    outline: thin dotted;
+        outline: 0px auto -webkit-focus-ring-color;
+        outline-offset: 0px;
+    }
+    button:focus {
+     outline: thin dotted;
+        outline: 0px auto -webkit-focus-ring-color;
+        outline-offset: 0px;
+    }
 
 #play{
     width: auto;
     height: auto;
+}
+
+@media(min-width: 1000px){
+    .canvas{
+        max-width: 500px;
+    }
+    .points{
+        font-size: 2em;
+    }
 }
