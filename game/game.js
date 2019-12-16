@@ -40,7 +40,7 @@ function init() {
             width: 1,
             heigth: 1
         },
-        time: 300,
+        time: 200,
         move: 'rigth',
         moved: '',
         fruit: null
