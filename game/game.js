@@ -2,7 +2,8 @@
 let game
 const gameCanvas = document.getElementById('game-canvas')
 const context = gameCanvas.getContext('2d')
-
+game = { status: false}
+document.addEventListener('keydown', handleKeydown)
 function main() {
     init()
 }
@@ -43,13 +44,13 @@ function init() {
         time: 200,
         move: 'rigth',
         moved: '',
-        fruit: null
+        fruit: null,
+        status: true
     }
     if(screen.width < 768){
         document.querySelector('#control').classList.remove('some')
     }
     playerRender(game.move)
-    document.addEventListener('keydown', handleKeydown)
     game.loop = setInterval(movePlayer, game.time)
 }
 function handleKeydown(e) {
@@ -78,6 +79,9 @@ function handleKeydown(e) {
         if(game.player.points > 0){
             game.moved = game.move
         }
+    }
+    if (keyPress === ' ' && game.status == false) {
+        main()
     }
 }
 function movePlayer() {
@@ -133,6 +137,7 @@ function movePlayer() {
             clearInterval(game.loop)
             document.querySelector(".points").innerHTML = 'Game Over: ' + game.player.points + ' pontos'
             document.getElementById('play').classList.remove('some')
+            game.status = false
         }
     }
 
