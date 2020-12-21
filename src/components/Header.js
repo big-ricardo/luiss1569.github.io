@@ -39,7 +39,7 @@ const Header = () => {
           <Fade bottom>
             <p>{data.headerParagraph}</p>
           </Fade>
-          <Fade bottom>
+          <Fade bottom cascade>
             <a
               href={`mailto:${
                 data.contactEmail ? data.contactEmail : "hello@chetanverma.com"

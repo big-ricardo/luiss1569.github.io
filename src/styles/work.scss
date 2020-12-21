@@ -22,5 +22,8 @@
     @include media(">=tablet", "<desktop") {
       grid-template-columns: 1fr 1fr;
     }
+    @media only screen and (max-width: 400px) {
+      grid-template-columns: 1fr;
+    }
   }
 }

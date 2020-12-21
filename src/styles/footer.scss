@@ -23,7 +23,7 @@
     }
   }
   .email-link {
-    font-size: 1.5rem;
+    font-size: clamp(23px, 2vw, 1.5rem);
     color: black;
   }
   .social-icons {

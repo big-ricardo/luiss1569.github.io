@@ -65,13 +65,13 @@ export default {
     },
      {
       id: 4, 
-      title: "Project Five", 
+      title: "Among Reactor", 
       para:
-        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.", 
+        "Among Reactor, um dos mini games do among us, feito em css puro e js.", 
       
       imageSrc:
-        "https://images.unsplash.com/photo-1534239143101-1b1c627395c5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxzZWFyY2h8NzZ8fHBhc3RlbHxlbnwwfHwwfA%3D%3D&auto=format&fit=crop&w=400&q=60",
-      url: "http://chetanverma.com/",
+        "https://user-images.githubusercontent.com/39037985/102727490-b45f3280-4304-11eb-9dc6-99b00e2fc075.jpg",
+      url: "https://luiss1569.github.io/reactor-among-us/",
     },
     {
       id: 5, 
