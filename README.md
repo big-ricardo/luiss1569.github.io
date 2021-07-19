@@ -1,4 +1,1 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 31d1b5b6561e9e6469add6e7fe15d2d0a6814b28
+## Meu Site Pessoal em NEXT.JS hospedado no GH PAGES
