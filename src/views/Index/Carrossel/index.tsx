@@ -13,10 +13,10 @@ export default function CarrosselView() {
           </div>
           <div>
             <p>Entusiasta das melhores tecnologias de desenvolvimento</p>
-            <Link href={"/"}><H4 whileHover={{transform:"translateX(5px)"}}>COMEÇAR</H4></Link>
+            <Link href={"/"}><H4>COMEÇAR</H4></Link>
           </div>
         </SectionText>
-        <SectionImg whileHover={{ scale: 1.1 }}>
+        <SectionImg>
           <img src="/carrossel.svg" alt="" />
         </SectionImg>
       </Carrossel>

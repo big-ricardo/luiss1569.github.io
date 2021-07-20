@@ -9,6 +9,7 @@ export default function CarrosselContainer() {
       <Container>
         <SectionItens>
             <a href="" target="_blank"><img src="https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white" /></a>
+            <a href="https://github.com/luiss1569" target="_blank"><img src="https://img.shields.io/badge/-Github-230077B5?style=for-the-badge&logo=github&logoColor=white" /></a>
             <a href="https://instagram.com/luisricar_do" target="_blank"><img src="https://img.shields.io/badge/-Instagram-%23E4405F?style=for-the-badge&logo=instagram&logoColor=white"/></a>
            	<a href="https://www.twitch.tv/luisricar_do" target="_blank"><img src="https://img.shields.io/badge/Twitch-9146FF?style=for-the-badge&logo=twitch&logoColor=white"/></a>
             <a href="" target="_blank"><img src="https://img.shields.io/badge/Discord-7289DA?style=for-the-badge&logo=discord&logoColor=white"/></a>
