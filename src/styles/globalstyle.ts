@@ -11,7 +11,9 @@ export default createGlobalStyle`
   }
 
   html{
-    margin-bottom: 20px;
+    padding-bottom: 10%;
+    max-width: 1920px;
+    margin: auto;
   }
 
   h3.title{

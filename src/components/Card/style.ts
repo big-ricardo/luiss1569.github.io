@@ -17,7 +17,8 @@ export const Card = styled.div`
   padding: 5px;
   border:2px solid ${props => props.theme.colors.primary};
   border-radius: 20px;
-
+  min-height: 445px;
+  max-height: 450px;
 
   div.image{
     width: 90%;
@@ -34,10 +35,9 @@ export const Card = styled.div`
 
   div{
     display: flex;
-    flex: 1;
     flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     margin: 5px;
     max-width: 90%;
 
@@ -46,7 +46,7 @@ export const Card = styled.div`
     }
   }`
 
-  export const H4 = styled(motion.h4)`
+export const H4 = styled(motion.h4)`
     width: min-content;
     border-radius: 50px;
     padding: 3% 6%;
