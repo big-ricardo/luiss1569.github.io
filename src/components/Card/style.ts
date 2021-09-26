@@ -20,6 +20,10 @@ export const Card = styled.div`
   min-height: 445px;
   max-height: 450px;
 
+  a{
+    padding: 10px;
+  }
+
   div.image{
     width: 90%;
     height: 190px;
@@ -46,18 +50,22 @@ export const Card = styled.div`
     }
   }`
 
-export const H4 = styled(motion.h4)`
-    width: min-content;
+export const Link = styled(motion.a)`
     border-radius: 50px;
     padding: 3% 6%;
-    cursor: pointer;
-      z-index: 10;
     background-color: ${props => props.theme.colors.secound};
-    color: ${props => props.theme.colors.backgroundColor};
-    font-family: 'Roboto', sans-serif;
-    font-size: clamp(15px, 1vw, 27px);
     margin-top: 15px;
     margin-bottom: 20px;
+    min-width: 80px;
+    text-decoration: none;
+
+    p{
+      color: ${props => props.theme.colors.backgroundColor};
+      font-size: clamp(15px, 1vw, 27px);
+      margin: auto;
+      text-align: center;
+    }
+
     &:hover{
       background-color: ${props => props.theme.colors.secound};
     }

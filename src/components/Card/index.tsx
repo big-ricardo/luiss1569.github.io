@@ -1,8 +1,7 @@
-import { Container, Card, H4 } from "./style";
-import Link from 'next/link'
+import { Container, Card, Link } from "./style";
 
 export default function CardComponent({ project }) {
-
+  console.log(project);
   return (
     <Container>
       <Card>
@@ -15,7 +14,7 @@ export default function CardComponent({ project }) {
         <div>
           <p>{project.Description}</p>
         </div>
-        <Link href={project.Link}><H4 whileHover={{transform:"translateX(5px)"}}>Veja</H4></Link>
+        <Link whileHover={{transform:"translateX(5px)"}} target="_blank" href={project.Link}><p>Veja</p></Link>
       </Card>
     </Container>
   );
