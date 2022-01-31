@@ -12,7 +12,7 @@ export const Card = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 350px;
+  width: clamp(270px, 1vw + 350px , 90vw);
   align-items: center;
   padding: 5px;
   border:2px solid ${props => props.theme.colors.primary};
@@ -45,15 +45,22 @@ export const Card = styled.div`
     margin: 5px;
     max-width: 90%;
 
+    h4{
+      font-size: clamp(15px, 1.6em, 35px);
+      color: ${props => props.theme.colors.text};
+    }
+
     p{
       text-align: center;
+      font-size: clamp(12px, 1em, 25px);
+      color: ${props => props.theme.colors.text};
     }
   }`
 
 export const Link = styled(motion.a)`
     border-radius: 50px;
     padding: 3% 6%;
-    background-color: ${props => props.theme.colors.secound};
+    background-color: ${props => props.theme.colors.second};
     margin-top: 15px;
     margin-bottom: 20px;
     min-width: 80px;
@@ -67,7 +74,7 @@ export const Link = styled(motion.a)`
     }
 
     &:hover{
-      background-color: ${props => props.theme.colors.secound};
+      background-color: ${props => props.theme.colors.second};
     }
  @media screen and (max-width: 1024px){
       text-align: center;

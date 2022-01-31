@@ -16,6 +16,10 @@ export default createGlobalStyle`
     margin: auto;
   }
 
+  body{
+    background: ${props => props.theme.colors.background};
+  }
+
   h3.title{
     color: ${props => props.theme.colors.primary};
     font-size: clamp(28px, 1vw , 200px);

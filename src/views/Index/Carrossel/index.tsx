@@ -1,5 +1,7 @@
-import { Carrossel, SectionText, SectionImg,H4 } from "./styles";
+import { Carrossel, SectionText, SectionImg, Button } from "./styles";
 import Link from 'next/link'
+import Lottie from 'react-lottie';
+import animationData from '../../../lotties/carrossel.json'
 
 export default function CarrosselView() {
 
@@ -13,11 +15,20 @@ export default function CarrosselView() {
           </div>
           <div>
             <p>Entusiasta das melhores tecnologias de desenvolvimento</p>
-            <Link href={"/"}><H4>COMEÇAR</H4></Link>
+            <Link href={"/"}><Button>COMEÇAR</Button></Link>
           </div>
         </SectionText>
         <SectionImg>
-          <img src="/carrossel.svg" alt="" />
+          <Lottie
+            options={{
+              loop: true,
+              autoplay: true,
+              animationData: animationData,
+              rendererSettings: {
+                preserveAspectRatio: "xMidYMid slice"
+              }
+            }}
+          />
         </SectionImg>
       </Carrossel>
     </>

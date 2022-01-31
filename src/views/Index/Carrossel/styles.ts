@@ -8,8 +8,7 @@ export const Carrossel = styled(motion.div)`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 90vh;
-  margin-left: 10%;
+  height: 65vh;
  @media screen and (max-width: 1024px){
     flex-direction: column-reverse;
     margin-left: 5%;
@@ -67,7 +66,7 @@ export const SectionText = styled(motion.div)`
     }
   }
 `
-export const H4 = styled.h4`
+export const Button = styled.div`
     width: min-content;
     border-radius: 50px;
     padding: 3% 6%;
@@ -79,7 +78,7 @@ export const H4 = styled.h4`
     font-family: 'Roboto', sans-serif;
     font-size: clamp(20px, 1vw, 27px);
     &:hover{
-      background-color: ${props => props.theme.colors.secound};
+      background-color: ${props => props.theme.colors.second};
       transform: translateX(5px);
     }
  @media screen and (max-width: 1024px){
@@ -89,7 +88,7 @@ export const H4 = styled.h4`
 `
 
 export const SectionImg = styled.div`
-  width: 45%;
+  width: 35%;
   z-index: 10;
   transition: .5s;
 

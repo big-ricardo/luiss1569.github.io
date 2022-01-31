@@ -9,18 +9,14 @@ export const Container = styled.div`
   flex-direction: column;
 `
 export const List = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin: auto;
   margin-top: 50px;
-
-  @media (max-width: 960px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media (max-width: 500px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90%;
 
 `

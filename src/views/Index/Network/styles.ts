@@ -13,7 +13,7 @@ export const Container = styled(motion.div)`
   }
 `;
 
-export const SectionItens = styled(motion.div)`
+export const SectionItems = styled(motion.div)`
   width: 80%;
   flex: 1;
   display: flex;
@@ -39,5 +39,31 @@ export const SectionItens = styled(motion.div)`
       font-size: clamp(22px, 3vh - 5px, 200px);
       margin-bottom: 10px
     }
+  }
+
+  a{
+    width: clamp(40px, 1vw + 110px, 150px);
+    height: 100%;
+    transition: 0.3s;
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    &:hover{
+      cursor: pointer;
+      transform: scale(1.1);
+    }
+  }
+`
+export const Tech = styled(motion.img)`
+  width: clamp(30px, 1vw + 1.5em , 100px);
+  transition: 0.3s;
+  &:hover{
+      cursor: pointer;
+      transform: scale(1.1);
   }
 `

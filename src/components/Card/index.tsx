@@ -1,7 +1,6 @@
 import { Container, Card, Link } from "./style";
 
 export default function CardComponent({ project }) {
-  console.log(project);
   return (
     <Container>
       <Card>
