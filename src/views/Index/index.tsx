@@ -4,14 +4,14 @@ import Network from './Network'
 import Recents from './Projects'
 import Timeline from './TimeLine'
 
-export default function Home({ projects,  social_networks }) {
+export default function Home({ projects,  social_networks, experiences }) {
   return (
     <div>
       <Carrossel />
       <Network  social_networks={ social_networks} />
       <About />
-      <Recents projects={projects} />
-      <Timeline />
+      <Recents projects={ projects } />
+      <Timeline experiences={ experiences }/>
     </div>
   )
 }

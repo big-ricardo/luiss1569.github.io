@@ -12,7 +12,9 @@ export default function CardComponent() {
   const animate = async () => {
     if(lottieRef.current) {
       setIsDark(prev => !prev);
-      toggleTheme();
+      setTimeout(() => {
+        toggleTheme();
+      }, 600);
     }
   }
 

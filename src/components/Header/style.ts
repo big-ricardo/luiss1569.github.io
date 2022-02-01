@@ -8,7 +8,7 @@ export const Container = styled.div`
   align-items: end;
   flex: 1;
   width:100%;
-  height: clamp(60px, 3em + 60px, 120px);
+  padding: 20px;
   gap: 1em;
 `
 
@@ -22,6 +22,6 @@ export const Item = styled(motion.div)`
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: clamp(40px, 1vw + 30px, 120px);
+  height: clamp(30px, 1vw, 70px);
   cursor: pointer;
 `

@@ -10,30 +10,77 @@ import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import { Container, Time, Curse, Institution } from './style';
 import { ThemeContext } from 'styled-components';
 
-export default function OppositeContentTimeline() {
+export default function OppositeContentTimeline({ experiences }) {
   const theme = React.useContext(ThemeContext);
+  const colors = [theme.colors.secondary, theme.colors.primary];
+
   return (
-    <Container>
-      <h3 className="title">Trajetória</h3>
+    <>
+      <Container>
+        <h3 className="title">Experiência</h3>
+        <TimeLine data={experiences.works} colors={colors} />
+      </Container>
+      <Container>
+        <h3 className="title">Formação Acadêmica</h3>
+        <TimeLine data={experiences.studies} colors={colors} />
+      </Container>
+      <Container>
+        <h3 className="title">Experiência de Voluntariado</h3>
+        <TimeLine data={experiences.volunteers} colors={colors} />
+      </Container>
+    </>
+  );
+}
+
+const TimeLine = ({ data, colors }) => {
+
+  const variantType = React.useCallback((date) => {
+    return (new Date(date).getTime() < new Date().getTime())
+  }, []);
+
+  return (
+    <>
+      <br />
       <Timeline position="alternate">
-        <TimelineItem>
+        {data.map((item, index) => (
+          <TimelineItem key={index}>
+            <TimelineOppositeContent>
+              <Time whileHover={{ transform: index % 2 ? "translateX(5px)" : "translateX(-5px)" }}>
+                {item.Time}
+              </Time>
+            </TimelineOppositeContent>
+            <TimelineSeparator>
+              <TimelineDot variant={`${variantType(item.Date.end) ? "outline" : "filled"} `} style={{ borderColor: colors[index % 2], backgroundColor: variantType(item.Date.end) ? colors[index % 2] : '' }} />
+              <TimelineConnector />
+            </TimelineSeparator>
+            <TimelineContent>
+              <Curse whileHover={{ transform: index % 2 ? "translateX(-5px)" : "translateX(5px)" }}>
+                {item.Name}
+              </Curse>
+              <Institution whileHover={{ transform: index % 2 ? "translateX(-5px)" : "translateX(5px)" }}>
+                {item.Desc}
+              </Institution>
+            </TimelineContent>
+          </TimelineItem>
+        ))}
+        <TimelineItem >
           <TimelineOppositeContent>
-            <Time whileHover={{transform:"translateX(-5px)"}}>
-              2017 - 2019
+            <Time >
+
             </Time>
           </TimelineOppositeContent>
           <TimelineSeparator>
-            <TimelineDot variant="outlined" style={{borderColor: theme.colors.secondary}}/>
-            <TimelineConnector />
+            <TimelineDot style={{ borderColor: colors[data.length % 2], backgroundColor: colors[data.length % 2] }} />
           </TimelineSeparator>
           <TimelineContent>
-            <Curse whileHover={{transform:"translateX(5px)"}}>
-              Técnico em Informática
+            <Curse>
+
             </Curse>
-            <Institution whileHover={{transform:"translateX(5px)"}}>CEP - Centro Educação Profissional Tancredo Neves</Institution>
+            <Institution>
+            </Institution>
           </TimelineContent>
         </TimelineItem>
       </Timeline>
-    </Container>
-  );
-}
+    </>
+  )
+};

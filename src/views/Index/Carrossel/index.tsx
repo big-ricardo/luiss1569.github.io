@@ -11,7 +11,7 @@ export default function CarrosselView() {
         <SectionText>
           <div>
             <h1>Luis Ricardo</h1>
-            <h3>Sistemas de Informação | UNIFEI</h3>
+            <h3>Programador Full Stack na Tech4Humans BrasilI</h3>
           </div>
           <div>
             <p>Entusiasta das melhores tecnologias de desenvolvimento</p>

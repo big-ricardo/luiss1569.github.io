@@ -14,8 +14,8 @@ export const ProjectsDBQuery = async (props = {}) => {
     let keys = null
     const array = result.map((obj) => {
       keys = Object.keys(obj)
-      return keys.map(function (chave) {
-        return obj[chave];
+      return keys.map(function (key) {
+        return obj[key];
       });
     })
 
@@ -44,8 +44,38 @@ export const SocialNetworkDbQuery = async (props = {}) => {
     let keys = null
     const array = result.map((obj) => {
       keys = Object.keys(obj)
-      return keys.map(function (chave) {
-        return obj[chave];
+      return keys.map(function (key) {
+        return obj[key];
+      });
+    })
+
+    const format = array.map(element => {
+      let object = {}
+      element.forEach((item, i) => {
+        const key = keys[i]
+        const obj = convertDataToObj(item, key)
+        object = { ...object, ...obj }
+      })
+      return object
+    });
+
+    return format
+  })
+
+  return response
+}
+
+export const ExperiencesDbQuery = async (props = {}) => {
+
+  const response = await QueryDBGeneric({
+    database_id: process.env.NOTION_EXPERIENCES,
+    ...props
+  }).then(result => {
+    let keys = null
+    const array = result.map((obj) => {
+      keys = Object.keys(obj)
+      return keys.map(function (key) {
+        return obj[key];
       });
     })
 
@@ -67,12 +97,12 @@ export const SocialNetworkDbQuery = async (props = {}) => {
 
 const QueryDBGeneric = async (props) => {
   const response = await notion.databases.query({
-    ...props
+    ...props,
   }).then(({ results }: any) => {
     return results?.map(result => result.properties)
-  }).catch(e => { })
+  }).catch(e => console.log(e))
 
-  return response
+  return response || []
 }
 
 const convertDataToObj = (item: any, key: string) => {
