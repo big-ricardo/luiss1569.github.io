@@ -1,10 +1,10 @@
 import { ThemesContext } from "@/src/contexts/themeContext";
-import { useContext, useEffect, useRef, useState } from "react";
+import { memo, useContext, useEffect, useRef, useState } from "react";
 import Lottie from 'react-lottie';
 import { Container, ListItems, Item } from "./style";
 import animationData from '@/src/lotties/darkLigthToogle.json';
 
-export default function CardComponent() {
+function CardComponent() {
   const { theme, toggleTheme } = useContext(ThemesContext);
   const [isDark, setIsDark] = useState(theme.title);
   const lottieRef = useRef(null);
@@ -46,3 +46,5 @@ export default function CardComponent() {
     </Container>
   );
 }
+
+export default memo(CardComponent);

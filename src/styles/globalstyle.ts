@@ -11,7 +11,7 @@ export default createGlobalStyle`
   }
 
   html{
-    padding-bottom: 10%;
+    padding-bottom: clamp(30px, 5%, 100px);
     max-width: 1920px;
     margin: auto;
   }

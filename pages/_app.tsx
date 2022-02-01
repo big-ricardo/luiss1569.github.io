@@ -6,6 +6,7 @@ import NProgress from 'nprogress'
 import Router from 'next/router'
 import { AnimateSharedLayout } from 'framer-motion'
 import Header from '@/src/components/Header'
+import Footer from '@/src/components/Footer'
 
 Router.events.on('routeChangeStart', (url) => {
   NProgress.start()
@@ -28,6 +29,7 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
       <AnimateSharedLayout>
         <Header/>
         <Component {...pageProps} />
+        <Footer />
       </AnimateSharedLayout>
       <GlobalStyle />
     </ThemeProvider>
