@@ -13,13 +13,12 @@ export const Container = styled(motion.div)`
 `;
 
 export const SectionText = styled(motion.div)`
-  width: 80%;
-  flex: 1;
+  width: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  z-index: 10;
+  text-align: center;
     @media screen and (max-width: 1024px){
      width: 90%;
     }
@@ -28,13 +27,14 @@ export const SectionText = styled(motion.div)`
     }
   p{
     color: ${props => props.theme.colors.title};
-    font-size: clamp(22px, 1vw + 5px, 25px);
+    font-size: clamp(10px, 1vw + 15px, 22px);
     margin-top: 30px;
     margin-bottom: 5%;
-    @media screen and (max-width: 1024px){
-      text-align: center;
-      font-size: clamp(22px, 3vh - 5px, 200px);
-      margin-bottom: 10px
+
+    a{
+      text-decoration: none;
+      color: inherit;
+      font-weight: bold;
     }
   }
 `

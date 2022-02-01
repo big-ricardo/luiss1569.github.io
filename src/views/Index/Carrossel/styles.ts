@@ -14,6 +14,7 @@ export const Carrossel = styled(motion.div)`
     margin-left: 5%;
     height: 90vh;
     min-height: 400px;
+    justify-content: space-evenly;
   }
 `;
 

@@ -8,7 +8,8 @@ export const Container = styled.div`
   align-items: end;
   flex: 1;
   width:100%;
-  padding: 20px;
+  padding: 5px;
+  padding-top: 10px;
   gap: 1em;
 `
 
