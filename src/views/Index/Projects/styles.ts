@@ -8,7 +8,7 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
   margin-top: 20px;
-`
+`;
 export const List = styled.div`
   gap: 30px;
   margin: auto;
@@ -19,5 +19,4 @@ export const List = styled.div`
   align-items: center;
   flex-wrap: wrap;
   width: 90%;
-
-`
+`;

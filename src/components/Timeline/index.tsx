@@ -1,5 +1,5 @@
-import { useCallback, memo } from 'react';
-import {Time, Curse, Institution } from './style';
+import { useCallback, memo } from "react";
+import { Time, Curse, Institution } from "./style";
 import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";

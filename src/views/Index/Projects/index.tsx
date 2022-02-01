@@ -1,9 +1,8 @@
 import { GetStaticProps } from "next";
-import { Container, List } from './styles'
-import Card from '@/src/components/Card'
+import { Container, List } from "./styles";
+import Card from "@/src/components/Card";
 
 export default function RecentsContainer({ projects = [] }) {
-
   return (
     <Container>
       <h3 className="title">Projetos Recentes</h3>
@@ -12,8 +11,10 @@ export default function RecentsContainer({ projects = [] }) {
           projects.map((project, key) => (
             <Card key={key} project={project}></Card>
           ))
-        ) : (<></>)}
+        ) : (
+          <></>
+        )}
       </List>
     </Container>
-  )
+  );
 }

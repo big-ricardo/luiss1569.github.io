@@ -1,8 +1,8 @@
 import { ThemesContext } from "@/src/contexts/themeContext";
 import { memo, useContext, useEffect, useRef, useState } from "react";
-import Lottie from 'react-lottie';
+import Lottie from "react-lottie";
 import { Container, ListItems, Item } from "./style";
-import animationData from '@/src/lotties/darkLigthToogle.json';
+import animationData from "@/src/lotties/darkLigthToogle.json";
 
 function CardComponent() {
   const { theme, toggleTheme } = useContext(ThemesContext);
@@ -10,32 +10,32 @@ function CardComponent() {
   const lottieRef = useRef(null);
 
   const animate = async () => {
-    if(lottieRef.current) {
-      setIsDark(prev => !prev);
+    if (lottieRef.current) {
+      setIsDark((prev) => !prev);
       setTimeout(() => {
         toggleTheme();
       }, 600);
     }
-  }
+  };
 
   useEffect(() => {
-    if(lottieRef.current && isDark) {
+    if (lottieRef.current && isDark) {
       lottieRef.current.play();
     }
-  }, [lottieRef.current, isDark])
+  }, [lottieRef.current, isDark]);
 
   return (
     <Container>
       <ListItems>
-        <Item onClick={()=> animate()}>
+        <Item onClick={() => animate()}>
           <Lottie
             options={{
               loop: false,
               autoplay: false,
               animationData: animationData,
               rendererSettings: {
-                preserveAspectRatio: "xMidYMid slice"
-              }
+                preserveAspectRatio: "xMidYMid slice",
+              },
             }}
             isClickToPauseDisabled
             ref={lottieRef}

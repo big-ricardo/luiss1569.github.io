@@ -7,16 +7,16 @@ export const Container = styled.div`
   justify-content: center;
   align-items: end;
   flex: 1;
-  width:100%;
+  width: 100%;
   padding: 5px;
   padding-top: 10px;
   gap: 1em;
-`
+`;
 
 export const ListItems = styled.div`
   display: flex;
   flex-direction: column;
-`
+`;
 
 export const Item = styled(motion.div)`
   display: flex;
@@ -25,4 +25,4 @@ export const Item = styled(motion.div)`
   width: 100%;
   height: clamp(30px, 1vw, 70px);
   cursor: pointer;
-`
+`;

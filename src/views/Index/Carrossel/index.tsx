@@ -1,10 +1,9 @@
 import { Carrossel, SectionText, SectionImg, Button } from "./styles";
-import Link from 'next/link'
-import Lottie from 'react-lottie';
-import animationData from '../../../lotties/carrossel.json'
+import Link from "next/link";
+import Lottie from "react-lottie";
+import animationData from "../../../lotties/carrossel.json";
 
 export default function CarrosselView() {
-
   return (
     <>
       <Carrossel>
@@ -15,7 +14,9 @@ export default function CarrosselView() {
           </div>
           <div>
             <p>Entusiasta das melhores tecnologias de desenvolvimento</p>
-            <Link href={"/"}><Button>COMEÇAR</Button></Link>
+            <Link href={"/"}>
+              <Button>COMEÇAR</Button>
+            </Link>
           </div>
         </SectionText>
         <SectionImg>
@@ -25,12 +26,12 @@ export default function CarrosselView() {
               autoplay: true,
               animationData: animationData,
               rendererSettings: {
-                preserveAspectRatio: "xMidYMid slice"
-              }
+                preserveAspectRatio: "xMidYMid slice",
+              },
             }}
           />
         </SectionImg>
       </Carrossel>
     </>
   );
-};
+}

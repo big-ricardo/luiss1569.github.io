@@ -10,7 +10,7 @@ export default function OppositeContentTimeline({ experiences }) {
       theme.colors.secondary,
       theme.colors.primary,
       theme.colors.backgroundColor,
-    ]
+    ];
   }, [theme]);
 
   return (
@@ -31,5 +31,3 @@ export default function OppositeContentTimeline({ experiences }) {
     </>
   );
 }
-
-

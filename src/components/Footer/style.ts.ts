@@ -10,28 +10,28 @@ export const Container = styled(motion.div)`
 `;
 
 export const SectionText = styled.h4`
-  color: ${props => props.theme.colors.text};
+  color: ${(props) => props.theme.colors.text};
   text-align: center;
   font-weight: inherit;
-  font-size: clamp(11px, 1em , 22px);
+  font-size: clamp(11px, 1em, 22px);
   width: 90%;
-`
+`;
 export const Divider = styled(motion.div)`
   height: 1px;
-  background-color: ${props => props.theme.colors.primary};
+  background-color: ${(props) => props.theme.colors.primary};
   margin-top: 30px;
   margin-bottom: 60px;
   animation: slidein 2s ease infinite;
 
   @keyframes slidein {
-  0% {
-    width: 70%;
+    0% {
+      width: 70%;
+    }
+    60% {
+      width: 90%;
+    }
+    100% {
+      width: 70%;
+    }
   }
-  60% {
-    width: 90%;
-  }
-  100% {
-    width: 70%;
-  }
-}
-`
+`;

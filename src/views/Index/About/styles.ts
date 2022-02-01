@@ -7,7 +7,7 @@ export const Container = styled(motion.div)`
   flex-direction: row;
   justify-content: center;
   align-items: center;
- @media screen and (max-width: 1024px){
+  @media screen and (max-width: 1024px) {
     flex-direction: column-reverse;
   }
 `;
@@ -19,22 +19,22 @@ export const SectionText = styled(motion.div)`
   align-items: center;
   flex-direction: column;
   text-align: center;
-    @media screen and (max-width: 1024px){
-     width: 90%;
-    }
-    @media screen and (max-width: 768px) {
-     width: 90%;
-    }
-  p{
-    color: ${props => props.theme.colors.title};
+  @media screen and (max-width: 1024px) {
+    width: 90%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 90%;
+  }
+  p {
+    color: ${(props) => props.theme.colors.title};
     font-size: clamp(10px, 1vw + 15px, 22px);
     margin-top: 30px;
     margin-bottom: 5%;
 
-    a{
+    a {
       text-decoration: none;
       color: inherit;
       font-weight: bold;
     }
   }
-`
+`;

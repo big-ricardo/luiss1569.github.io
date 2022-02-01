@@ -8,8 +8,7 @@ export const Container = styled(motion.div)`
   justify-content: center;
   align-items: center;
   padding-bottom: 50px;
- @media screen and (max-width: 1024px){
-
+  @media screen and (max-width: 1024px) {
   }
 `;
 
@@ -23,47 +22,47 @@ export const SectionItems = styled(motion.div)`
   flex-wrap: wrap;
   z-index: 10;
   gap: 10px;
-    @media screen and (max-width: 1024px){
-     width: 90%;
-    }
-    @media screen and (max-width: 768px) {
-     width: 90%;
-    }
-  p{
-    color: ${props => props.theme.colors.title};
+  @media screen and (max-width: 1024px) {
+    width: 90%;
+  }
+  @media screen and (max-width: 768px) {
+    width: 90%;
+  }
+  p {
+    color: ${(props) => props.theme.colors.title};
     font-size: clamp(22px, 1vw + 5px, 25px);
     margin-top: 30px;
     margin-bottom: 5%;
-    @media screen and (max-width: 1024px){
+    @media screen and (max-width: 1024px) {
       text-align: center;
       font-size: clamp(22px, 3vh - 5px, 200px);
-      margin-bottom: 10px
+      margin-bottom: 10px;
     }
   }
 
-  a{
+  a {
     width: clamp(40px, 1vw + 110px, 150px);
     height: 100%;
     transition: 0.3s;
 
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       border-radius: 10px;
     }
 
-    &:hover{
+    &:hover {
       cursor: pointer;
       transform: scale(1.1);
     }
   }
-`
+`;
 export const Tech = styled(motion.img)`
-  width: clamp(30px, 1vw + 1.5em , 100px);
+  width: clamp(30px, 1vw + 1.5em, 100px);
   transition: 0.3s;
-  &:hover{
-      cursor: pointer;
-      transform: scale(1.1);
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.1);
   }
-`
+`;
