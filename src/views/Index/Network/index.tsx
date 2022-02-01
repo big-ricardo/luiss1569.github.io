@@ -7,6 +7,7 @@ export default function CarrosselContainer({ social_networks = [] }) {
   return (
     <>
       <Container>
+        <br /><br />
         <SectionItems>
           {social_networks?.length > 0 && social_networks.map((social, key) => (
             <a key={key} href={social.Link} target="_blank"><img src={social.Image} /></a>

@@ -78,7 +78,7 @@ export const Button = styled.div`
     font-family: 'Roboto', sans-serif;
     font-size: clamp(20px, 1vw, 27px);
     &:hover{
-      background-color: ${props => props.theme.colors.second};
+      background-color: ${props => props.theme.colors.secondary};
       transform: translateX(5px);
     }
  @media screen and (max-width: 1024px){

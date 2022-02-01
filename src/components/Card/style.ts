@@ -6,6 +6,10 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  perspective: 100px;
+  perspective-origin: 50% -100%;
+  border-radius: 20px;
+  margin-top: 50px;
 `
 
 export const Card = styled.div`
@@ -16,9 +20,45 @@ export const Card = styled.div`
   align-items: center;
   padding: 5px;
   border:2px solid ${props => props.theme.colors.primary};
-  border-radius: 20px;
   min-height: 445px;
   max-height: 450px;
+  border-radius: 20px;
+  position: relative;
+  transform-style: preserve-3d;
+  background-color: ${props => props.theme.colors.backgroundColor};
+  transition: background-color 0.3s ease-in-out;
+
+  &::before, &::after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    content: "";
+    display: block;
+    border-radius: 20px;
+    opacity: .8;
+    transition: transform .2s ease-in-out;
+  }
+
+  &::before {
+    background-color: ${props=> props.theme.colors.primary};
+    z-index: -1;
+    transform: translate3D(0,0,-5px);
+  }
+  &::after {
+    background-color: ${props=> props.theme.colors.secondary};
+    z-index: -2;
+    transform: translate3D(0,0,-10px);
+  }
+
+  &:hover {
+    background-color: ${props=> props.theme.colors.primary};
+    &::before {
+      transform: translate3D(0,0,0px);
+    }
+    &::after {
+      transform: translate3D(0,0,-5px);
+    }
+  }
 
   a{
     padding: 10px;
@@ -60,7 +100,7 @@ export const Card = styled.div`
 export const Link = styled(motion.a)`
     border-radius: 50px;
     padding: 3% 6%;
-    background-color: ${props => props.theme.colors.second};
+    background-color: ${props => props.theme.colors.secondary};
     margin-top: 15px;
     margin-bottom: 20px;
     min-width: 80px;
@@ -74,7 +114,7 @@ export const Link = styled(motion.a)`
     }
 
     &:hover{
-      background-color: ${props => props.theme.colors.second};
+      background-color: ${props => props.theme.colors.secondary};
     }
  @media screen and (max-width: 1024px){
       text-align: center;

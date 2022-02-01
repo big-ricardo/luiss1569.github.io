@@ -2,11 +2,11 @@ const dark = {
   title: 1,
   colors: {
     background: '#353535',
-    backgroundColor: '#fffefe',
+    backgroundColor: '#353535',
     text: '#fffefe',
     title: '#fffefe',
-    primary:'#6cd6a1',
-    second: 'rgb(251,85,69) ',
+    primary:'rgb(62,173,177)',
+    secondary: 'rgb(251,85,69) ',
     third: '#ffcf2d'
   }
 }

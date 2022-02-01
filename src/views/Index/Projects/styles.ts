@@ -7,6 +7,7 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 20px;
 `
 export const List = styled.div`
   gap: 30px;

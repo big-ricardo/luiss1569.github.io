@@ -2,6 +2,7 @@ import Carrossel from './Carrossel'
 import About from './About'
 import Network from './Network'
 import Recents from './Projects'
+import Timeline from './TimeLine'
 
 export default function Home({ projects,  social_networks }) {
   return (
@@ -10,6 +11,7 @@ export default function Home({ projects,  social_networks }) {
       <Network  social_networks={ social_networks} />
       <About />
       <Recents projects={projects} />
+      <Timeline />
     </div>
   )
 }
