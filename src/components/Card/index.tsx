@@ -5,7 +5,7 @@ export default function CardComponent({ project }) {
     <Container>
       <Card>
         <div className="image">
-          <img src={project.Image} alt={project.Name}></img>
+          <img src={project.Image} alt={project.Name} onError={()=> document.location.reload()}></img>
         </div>
         <div>
           <h4>{project.Name}</h4>

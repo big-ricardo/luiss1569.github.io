@@ -9,7 +9,6 @@ import {
 } from "@/src/config/notion_integration";
 
 export default function Home({ projects, social_networks, experiences, about }) {
-  console.log(about);
   return (
     <div>
       <Head>

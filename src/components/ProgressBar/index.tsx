@@ -2,8 +2,6 @@ import { memo } from "react";
 import { Container } from "./style";
 
 function CardComponent({ data }) {
-  console.log("CardComponent");
-  console.log(data);
   return (
     <Container>
       {data.length ? (

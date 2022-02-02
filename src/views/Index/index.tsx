@@ -3,6 +3,7 @@ import About from "./About";
 import Network from "./Network";
 import Recents from "./Projects";
 import Timeline from "./TimeLine";
+import Forms from "./Forms";
 import Lottie from "react-lottie";
 import animationData from "../../lotties/robotHello.json";
 
@@ -14,6 +15,7 @@ export default function Home({ projects, social_networks, experiences, about }) 
       <About about={about} />
       <Recents projects={projects} />
       <Timeline experiences={experiences} />
+      <Forms />
       <div
         style={{
           position: "absolute",
