@@ -1,6 +1,6 @@
 import { memo } from "react";
 import Lottie from 'react-lottie';
-import {Container, SectionText, Divider} from "./style.ts";
+import {Container, SectionText, Divider} from "./style";
 
 function CardComponent() {
 
