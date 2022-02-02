@@ -14,8 +14,8 @@ export default function CarrosselView() {
           </div>
           <div>
             <p>Entusiasta das melhores tecnologias de desenvolvimento</p>
-            <Link href={"/"}>
-              <Button>COMEÇAR</Button>
+            <Link href={"#about"}>
+              <Button>Sobre</Button>
             </Link>
           </div>
         </SectionText>

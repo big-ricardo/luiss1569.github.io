@@ -8,7 +8,7 @@ export const Carrossel = styled(motion.div)`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  height: 65vh;
+  height: 83vh;
   @media screen and (max-width: 1024px) {
     flex-direction: column-reverse;
     margin-left: 5%;
@@ -77,7 +77,9 @@ export const Button = styled.div`
   background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.backgroundColor};
   font-family: "Roboto", sans-serif;
-  font-size: clamp(20px, 1vw, 27px);
+  font-size: clamp(16px, 1vw, 27px);
+  font-weight: 700;
+  text-transform: uppercase;
   &:hover {
     background-color: ${(props) => props.theme.colors.secondary};
     transform: translateX(5px);

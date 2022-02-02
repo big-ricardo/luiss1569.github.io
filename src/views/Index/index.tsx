@@ -6,12 +6,12 @@ import Timeline from "./TimeLine";
 import Lottie from "react-lottie";
 import animationData from "../../lotties/robotHello.json";
 
-export default function Home({ projects, social_networks, experiences }) {
+export default function Home({ projects, social_networks, experiences, about }) {
   return (
     <div>
       <Carrossel />
       <Network social_networks={social_networks} />
-      <About />
+      <About about={about} />
       <Recents projects={projects} />
       <Timeline experiences={experiences} />
       <div

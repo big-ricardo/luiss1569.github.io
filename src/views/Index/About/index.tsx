@@ -1,26 +1,30 @@
+import ProgressBar from "@/src/components/ProgressBar";
 import Link from "next/link";
 
-import { Container, SectionText } from "./styles";
+import { Container, SectionText, SectionSkills } from "./styles";
 
-export default function CarrosselContainer() {
+export default function CarrosselContainer({about:{resume, soft, technical}}) {
   return (
     <>
-      <br /> <br />
       <Container>
         <SectionText>
-          <h3 className="title">Sobre</h3>
-          <p>
-            Sou Luis Ricardo, tenho 19 anos, sou formado como Técnico em
-            Informática pelo Cep- Centro Educação Profissional Tancredo Neves,
-            atualmente estou cursando Sistemas da Informação na Universidade
-            Federal de Itajubá - UNIFEI. Também trabalho como desenvolvedor
-            FullStack como estagiário na empresa{" "}
-            <a href="https://www.tech4h.com.br" target="_blank">
-              Tech4Humans Brasil
-            </a>
-            .
-          </p>
+          <h3 className="title" id="about">Sobre Mim</h3> <br /> <br />
+          {!resume.Text?.length ? resume.Text.map((text, index) => (
+            <p key={index}>{text}</p>
+          )) : (
+            <p>{resume.Text}</p>
+          )}
         </SectionText>
+        <SectionSkills>
+          <div className="skills">
+          <h3>Habilidades Técnicas</h3>
+            <ProgressBar data={technical} />
+          </div>
+          <div className="skills">
+          <h3>Habilidades Interpessoais</h3>
+            <ProgressBar data={soft} />
+          </div>
+        </SectionSkills>
       </Container>
     </>
   );

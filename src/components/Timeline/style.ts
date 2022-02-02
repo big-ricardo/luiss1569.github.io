@@ -7,8 +7,6 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin-top: 20px;
-  margin-top: 100px;
 `;
 export const Curse = styled(motion.h3)`
   color: ${(props) => props.theme.colors.title};

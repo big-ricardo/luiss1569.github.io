@@ -5,10 +5,11 @@ import {
   ProjectsDBQuery,
   SocialNetworkDbQuery,
   ExperiencesDbQuery,
+  AboutDbQuery,
 } from "@/src/config/notion_integration";
 
-export default function Home({ projects, social_networks, experiences }) {
-  console.log(projects);
+export default function Home({ projects, social_networks, experiences, about }) {
+  console.log(about);
   return (
     <div>
       <Head>
@@ -18,6 +19,7 @@ export default function Home({ projects, social_networks, experiences }) {
         projects={projects}
         social_networks={social_networks}
         experiences={experiences}
+        about={about}
       />
     </div>
   );
@@ -52,31 +54,21 @@ export const getStaticProps: GetStaticProps = async () => {
     sorts: [{ property: "Date", direction: "descending" }],
   });
 
-  const experiences_type = {
-    study: "162061ee-d4f2-46ca-9042-20012410cb2e",
-    work: "4b2b7b9c-33e4-4dd3-91f9-5a69e0d91ed6",
-    volunteer: "6cf1cb90-9da5-4daf-bb02-d0b6fa085e62",
-  };
-
-  const studies = experiences.filter(
-    (experience) => experience.Type.id === experiences_type.study
-  );
-  const works = experiences.filter(
-    (experience) => experience.Type.id === experiences_type.work
-  );
-  const volunteers = experiences.filter(
-    (experience) => experience.Type.id === experiences_type.volunteer
-  );
+  const about: any = await AboutDbQuery({
+    filter: {
+      property: "View",
+      checkbox: {
+        equals: true,
+      },
+    },
+  });
 
   return {
     props: {
       projects,
       social_networks,
-      experiences: {
-        studies,
-        works,
-        volunteers,
-      },
+      experiences,
+      about,
     },
     revalidate: 3500,
   };

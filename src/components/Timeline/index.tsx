@@ -15,7 +15,7 @@ const TimeLine = ({ data, colors }) => {
 
   return (
     <>
-      <br /> <br />
+      <br /> <br /> <br />
       <Timeline position="alternate">
         {data.map((item, index) => (
           <TimelineItem key={index}>
