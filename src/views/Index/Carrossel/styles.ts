@@ -89,3 +89,18 @@ export const Button = styled.div`
     margin: auto;
   }
 `;
+
+export const SectionImg = styled.div`
+  width: 35%;
+  z-index: 10;
+  transition: 0.5s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  @media screen and (max-width: 1024px) {
+    width: 60%;
+    margin-right: none;
+  }
+`;
