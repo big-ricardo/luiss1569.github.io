@@ -36,10 +36,7 @@ export const FormContainer = styled(Box)`
   border: 2px solid ${({ theme }) => theme.colors.primary};
   border-radius: 10px;
   @media screen and (max-width: 1024px) {
-    width: 60%;
-  }
-  @media screen and (max-width: 768px) {
-    width: 100%;
+    width: clamp(270px, 80vw, 400px);
   }
 
   h3 {
