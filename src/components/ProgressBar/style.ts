@@ -20,9 +20,17 @@ export const Container = styled(motion.div)`
       width: 90%;
     }
 
+    &:hover{
+      h4{
+        transform: scale(1.1) translateX(1%);
+        filter: drop-shadow(0px 2px 5px ${(props) => props.theme.colors.shadow});
+      }
+    }
+
     h4 {
       color: ${(props) => props.theme.colors.title};
       width: 160px;
+      transition: 0.3s ease-in-out;
     }
 
     .progress {

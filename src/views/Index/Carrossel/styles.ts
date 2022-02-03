@@ -46,11 +46,11 @@ export const SectionText = styled(motion.div)`
   div h1 {
     color: ${(props) => props.theme.colors.title};
     font-weight: 700;
-    font-size: clamp(40px, 4vw, 200px);
+    font-size: clamp(35px, 1vw + 2em, 100px);
     transition: 0.3s ease-in-out;
+    text-transform: uppercase;
     @media screen and (max-width: 1024px) {
       text-align: center;
-      font-size: clamp(22px, 4vh, 200px);
     }
   }
   div h3 {

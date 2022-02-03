@@ -58,6 +58,12 @@ export const SectionSkills = styled(motion.div)`
     gap: 20px;
     h3{
       color: ${(props) => props.theme.colors.primary};
+      font-size: clamp(20px, 1vw + 5px, 25px);
+      transition: all 0.3s ease-in-out;
+      &:hover{
+        color: ${(props) => props.theme.colors.secondary};
+        font-family: 'Ubuntu', sans-serif !important;
+      }
     }
   }
 `;

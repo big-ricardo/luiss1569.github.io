@@ -36,12 +36,18 @@ export default createGlobalStyle`
     border: 1px solid ${(props) => props.theme.colors.background};
   }
 
+  h1{
+    font-family: 'Audiowide','Ubuntu', sans-serif;
+  }
+
   h3.title, h3.simple-title{
     color: ${(props) => props.theme.colors.primary};
     font-size: clamp(25px, 1vw , 150px);
     transition: all 0.3s ease-in-out;
     margin-top: 50px;
     text-transform: capitalize;
+
+    font-family: 'Audiowide','Ubuntu', sans-serif;
     @media screen and (max-width: 1024px){
       text-align: center;
       font-size: clamp(20px, 3vh + 1px, 200px);
