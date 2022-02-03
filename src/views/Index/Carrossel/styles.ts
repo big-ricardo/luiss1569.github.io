@@ -26,6 +26,13 @@ export const SectionText = styled(motion.div)`
   justify-content: space-around;
   align-items: flex-start;
   z-index: 10;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    h1,h2,h3,p{
+      transform: scale(1.01);
+      filter: drop-shadow(0px 12px 5px ${(props) => props.theme.colors.shadow});
+    }
+  }
   @media screen and (max-width: 1024px) {
     align-items: center;
     height: max-content;
@@ -40,6 +47,7 @@ export const SectionText = styled(motion.div)`
     color: ${(props) => props.theme.colors.title};
     font-weight: 700;
     font-size: clamp(40px, 4vw, 200px);
+    transition: 0.3s ease-in-out;
     @media screen and (max-width: 1024px) {
       text-align: center;
       font-size: clamp(22px, 4vh, 200px);
@@ -48,6 +56,7 @@ export const SectionText = styled(motion.div)`
   div h3 {
     color: ${(props) => props.theme.colors.title};
     font-size: clamp(24px, 1vw, 200px);
+    transition: 0.3s ease-in-out;
     @media screen and (max-width: 1024px) {
       text-align: center;
       font-size: clamp(20px, 3vh + 1px, 200px);
@@ -58,6 +67,7 @@ export const SectionText = styled(motion.div)`
     font-size: clamp(20px, 1vw + 5px, 25px);
     width: 75%;
     margin-bottom: 5%;
+    transition: 0.3s ease-in-out;
     @media screen and (max-width: 1024px) {
       text-align: center;
       font-size: clamp(20px, 3vh - 5px, 200px);
@@ -83,6 +93,7 @@ export const Button = styled.div`
   &:hover {
     background-color: ${(props) => props.theme.colors.secondary};
     transform: translateX(5px);
+    box-shadow: 0px 0px 10px 0px ${(props) => props.theme.colors.secondary};
   }
   @media screen and (max-width: 1024px) {
     text-align: center;
@@ -97,6 +108,7 @@ export const SectionImg = styled.div`
 
   &:hover {
     transform: scale(1.1);
+    filter: drop-shadow(0px 12px 5px ${({ theme }) => theme.colors.shadow});
   }
 
   @media screen and (max-width: 1024px) {

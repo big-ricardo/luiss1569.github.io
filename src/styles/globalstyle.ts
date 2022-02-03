@@ -47,7 +47,9 @@ export default createGlobalStyle`
       font-size: clamp(20px, 3vh + 1px, 200px);
     }
     &:hover{
-      color: ${(props) => props.theme.colors.third};
+      color: ${(props) => props.theme.colors.secondary};
+      transform: scale(1.1);
+      filter: drop-shadow(0px 5px 10px ${(props) => props.theme.colors.shadow});
     }
   }
 
@@ -58,7 +60,7 @@ export default createGlobalStyle`
 
       &:before, &:after{
         background-color: ${(props) => props.theme.colors.backgroundColor};
-        width: 0%;
+        width: 30%;
       }
     }
 

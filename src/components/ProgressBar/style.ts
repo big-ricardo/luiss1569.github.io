@@ -39,6 +39,11 @@ export const Container = styled(motion.div)`
         span {
           transform: scale(1.1);
         }
+        .progress-bar,
+        .progress-bar-dummies, span {
+          box-shadow: 0px 5px 5px 0px
+            ${(props) => props.theme.colors.shadow};
+        }
         .progress-bar {
           transform: scaleY(1.2);
           &:before {

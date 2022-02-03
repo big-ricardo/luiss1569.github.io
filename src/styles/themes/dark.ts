@@ -8,6 +8,7 @@ const dark = {
     primary: "rgb(62,173,177)",
     secondary: "rgb(251,85,69) ",
     third: "#ffcf2d",
+    shadow: "rgba(0, 0, 0, 1)",
   },
 };
 

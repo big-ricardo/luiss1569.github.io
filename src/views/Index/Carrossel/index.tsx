@@ -29,6 +29,7 @@ export default function CarrosselView() {
                 preserveAspectRatio: "xMidYMid slice",
               },
             }}
+            isClickToPauseDisabled
           />
         </SectionImg>
       </Carrossel>

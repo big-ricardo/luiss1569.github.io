@@ -35,6 +35,7 @@ export default function Home({ projects, social_networks, experiences, about }) 
             },
           }}
           speed={0.8}
+          isClickToPauseDisabled
         />
       </div>
     </div>

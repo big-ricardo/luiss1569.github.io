@@ -183,6 +183,7 @@ export default function BasicTextFields() {
                 preserveAspectRatio: "xMidYMid slice",
               },
             }}
+            isClickToPauseDisabled
           />
         </SectionImg>
         <FormContainer
@@ -202,6 +203,7 @@ export default function BasicTextFields() {
             error={forms.nameError !== "" && formsStatus.submitting}
             helperText={formsStatus.submitting ? forms.nameError : ""}
             name="name"
+            placeholder="Seu nome completo"
             value={forms.name}
             onChange={handleChange}
           />
@@ -215,6 +217,7 @@ export default function BasicTextFields() {
             error={forms.emailError !== "" && formsStatus.submitting}
             helperText={formsStatus.submitting ? forms.emailError : ""}
             name="email"
+            placeholder="Seu email para contato"
             value={forms.email}
             onChange={handleChange}
           />

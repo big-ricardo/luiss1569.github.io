@@ -35,8 +35,13 @@ export const FormContainer = styled(Box)`
   gap: 20px;
   border: 2px solid ${({ theme }) => theme.colors.primary};
   border-radius: 10px;
+  transition: all 0.3s ease-in-out;
   @media screen and (max-width: 1024px) {
     width: clamp(270px, 80vw, 400px);
+  }
+
+  &:hover {
+    box-shadow: 0px 0px 10px 0px ${({ theme }) => theme.colors.primary};
   }
 
   h3 {
@@ -82,17 +87,16 @@ export const Button = styled.button`
   z-index: 10;
   transition: 0.5s;
   background-color: ${(props) => props.theme.colors.secondary};
-  color: ${(props) => props.theme.colors.backgroundColor};
+  color: #f5f5f5;
   font-family: "Roboto", sans-serif;
-  font-size: clamp(16px, 1vw, 20px);
+  font-size: clamp(16px, 1vw, 18px);
   font-weight: 700;
   text-transform: uppercase;
   border: none;
   margin-bottom: 20px;
   &:hover {
-    background-color: ${(props) => props.theme.colors.third};
-    color: ${(props) => props.theme.colors.text};
     transform: translateX(5px);
+    box-shadow: 0px 0px 10px 0px ${(props) => props.theme.colors.secondary};
   }
   @media screen and (max-width: 1024px) {
     text-align: center;
@@ -109,8 +113,15 @@ export const SectionImg = styled.div`
   z-index: 10;
   transition: 0.5s;
 
+  svg {
+    transition: 0.5s ease-in-out;
+  }
+
   &:hover {
     transform: scale(1.1);
+    svg {
+      filter: drop-shadow(0px 0px 1px ${({ theme }) => theme.colors.primary});
+    }
   }
 
   @media screen and (max-width: 1024px) {

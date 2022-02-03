@@ -27,6 +27,7 @@ export const Card = styled.div`
   transform-style: preserve-3d;
   background-color: ${(props) => props.theme.colors.backgroundColor};
   transition: background-color 0.3s ease-in-out;
+  transition: transform .4s ease-in-out;
 
   &::before,
   &::after {
@@ -52,9 +53,11 @@ export const Card = styled.div`
   }
 
   &:hover {
-    background-color: ${(props) => props.theme.colors.primary};
+    border: 2px solid ${(props) => props.theme.colors.secondary};
+    box-shadow: 0px 0px 10px 0px ${(props) => props.theme.colors.secondary};
+    transform: scale(1.01);
     &::before {
-      transform: translate3D(0, 0, 0px);
+      transform: translate3D(0, 0, -2px);
     }
     &::after {
       transform: translate3D(0, 0, -5px);
@@ -117,6 +120,7 @@ export const Link = styled(motion.a)`
 
   &:hover {
     background-color: ${(props) => props.theme.colors.secondary};
+    box-shadow: 0px 0px 10px 0px ${(props) => props.theme.colors.primary};
   }
   @media screen and (max-width: 1024px) {
     text-align: center;

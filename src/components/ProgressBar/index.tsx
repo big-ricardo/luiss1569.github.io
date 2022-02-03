@@ -22,22 +22,21 @@ const ProgressItem = ({ data, key = 0 }) => (
         role="progressbar"
         style={{ width: `${data.Text}%` }}
         aria-valuenow={data.text}
-      >
-      </div>
+      ></div>
       <span
-          style={{
-            left: `${data.Text}%`,
-          }}
-        >
-          {data.Text}%
-        </span>
-        <div
+        style={{
+          left: `${data.Text}%`,
+        }}
+      >
+        {data.Text}%
+      </span>
+      <div
         className="progress-bar-dummies"
         style={{ width: `${100 - Number(data.Text)}%` }}
         aria-valuenow={data.text}
       />
-  </div>
     </div>
+  </div>
 );
 
 export default memo(CardComponent);

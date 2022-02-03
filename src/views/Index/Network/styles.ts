@@ -55,6 +55,7 @@ export const SectionItems = styled(motion.div)`
     &:hover {
       cursor: pointer;
       transform: scale(1.1);
+      filter: drop-shadow(0px 0px 5px ${(props) => props.theme.colors.shadow});
     }
   }
 `;
