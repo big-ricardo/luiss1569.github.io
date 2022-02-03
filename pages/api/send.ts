@@ -61,16 +61,17 @@ export default async (
       text,
       html,
     };
+    console.log("mailOptions",JSON.stringify(mailOptions));
 
     await transporter.sendMail(mailOptions, (err, info) => {
       if (err) {
         console.log(err);
       } else {
         console.log("Email sent: " + info.response);
+        res.json({ error: false, message: "Email submitted successfully", info });
       }
     });
 
-    res.json({ error: false, message: "Email submitted successfully" });
   } catch (e) {
     console.error(e);
     res.status(500).json({ error: e.message });
