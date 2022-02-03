@@ -24,6 +24,7 @@ export default function Home({ projects, social_networks, experiences, about }) 
           width: "clamp(150px, 20vw, 300px)",
           zIndex: 10,
         }}
+        className="sm-none"
       >
         <Lottie
           options={{

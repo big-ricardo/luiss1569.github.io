@@ -35,13 +35,12 @@ export default class Document extends NextDocument {
     return (
       <Html lang="pt-BR">
         <Head>
-          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
           <link
-            href="https://fonts.googleapis.com/css2?family=Sigmar+One&family=Ubuntu:wght@300;400;500;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Audiowide&family=Roboto:wght@400;900&family=Ubuntu:wght@400;700&display=swap"
             rel="stylesheet"
-          ></link>
-          <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet"></link>
-
+          />
         </Head>
         <body>
           <Main />

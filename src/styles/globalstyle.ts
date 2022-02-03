@@ -20,6 +20,12 @@ export default createGlobalStyle`
 
   body{
     background: ${(props) => props.theme.colors.background};
+
+    @media screen and (max-width: 768px) {
+      .sm-none{
+        display: none;
+      }
+    }
   }
 
   *::-webkit-scrollbar {
@@ -42,11 +48,11 @@ export default createGlobalStyle`
 
   h3.title, h3.simple-title{
     color: ${(props) => props.theme.colors.primary};
-    font-size: clamp(25px, 1vw , 150px);
+    font-size: clamp(16, 1vw , 40px);
     transition: all 0.3s ease-in-out;
     margin-top: 50px;
     text-transform: capitalize;
-
+    max-width: 90%;
     font-family: 'Audiowide','Ubuntu', sans-serif;
     @media screen and (max-width: 1024px){
       text-align: center;
@@ -61,7 +67,7 @@ export default createGlobalStyle`
 
   h3.title{
     text-transform: uppercase;
-    font-size: clamp(28px, 1vw , 200px);
+    font-size: clamp(20px, 1vw + 10px, 45px);
     &:hover{
 
       &:before, &:after{
@@ -86,6 +92,11 @@ export default createGlobalStyle`
     &:before{
       width: 50%;
       top: 2.2em;
+
+      @media screen and (max-width: 768px){
+        top: 2.6em;
+      }
+
     }
   }
 `;

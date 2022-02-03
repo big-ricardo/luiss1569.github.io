@@ -87,8 +87,8 @@ export const Button = styled.div`
   background-color: ${(props) => props.theme.colors.primary};
   color: ${(props) => props.theme.colors.backgroundColor};
   font-family: "Roboto", sans-serif;
-  font-size: clamp(16px, 1vw, 27px);
-  font-weight: 700;
+  font-size: clamp(16px, 1vw , 27px);
+  font-weight: bold;
   text-transform: uppercase;
   &:hover {
     background-color: ${(props) => props.theme.colors.secondary};
@@ -96,8 +96,7 @@ export const Button = styled.div`
     box-shadow: 0px 0px 10px 0px ${(props) => props.theme.colors.secondary};
   }
   @media screen and (max-width: 1024px) {
-    text-align: center;
-    margin: auto;
+    display: none;
   }
 `;
 
