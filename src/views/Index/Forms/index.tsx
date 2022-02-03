@@ -6,11 +6,11 @@ import {
   FormContainer,
   Button,
   LoadingComponent,
+  SectionImg,
 } from "./style";
 import Lottie from "react-lottie";
 import animationData from "../../../lotties/email.json";
 import animationDataEmailSucess from "../../../lotties/sendMessageSucess.json";
-import { SectionImg } from "../Carrossel/styles";
 import axios from "axios";
 import { Snackbar } from "@material-ui/core";
 import { Alert } from "@mui/material";
@@ -155,8 +155,11 @@ export default function BasicTextFields() {
     }
   }, [forms?.messageError, forms?.nameError, forms?.emailError]);
 
-  const handleClose = (event?: React.SyntheticEvent | Event, reason?: string) => {
-    if (reason === 'clickaway') {
+  const handleClose = (
+    event?: React.SyntheticEvent | Event,
+    reason?: string
+  ) => {
+    if (reason === "clickaway") {
       return;
     }
 
@@ -166,7 +169,9 @@ export default function BasicTextFields() {
   return (
     <Container>
       <br />
-      <h3 className="title" style={{marginTop: 0}}>Fale Comigo</h3>
+      <h3 className="title" style={{ marginTop: 0 }}>
+        Fale Comigo
+      </h3>
       <Section>
         <SectionImg>
           <Lottie
@@ -253,10 +258,13 @@ export default function BasicTextFields() {
           )}
         </FormContainer>
       </Section>
-      <Snackbar open={formsStatus.failed} autoHideDuration={6000} onClose={handleClose}>
-         <Alert severity="error">Erro ao enviar formulário</Alert>
+      <Snackbar
+        open={formsStatus.failed}
+        autoHideDuration={6000}
+        onClose={handleClose}
+      >
+        <Alert severity="error">Erro ao enviar formulário</Alert>
       </Snackbar>
-
     </Container>
   );
 }

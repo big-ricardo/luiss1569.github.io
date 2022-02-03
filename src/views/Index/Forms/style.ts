@@ -67,7 +67,7 @@ export const InputComponent = styled(TextField)`
     color: ${({ theme }) => theme.colors.text} !important;
   }
 
-  label:not(.Mui-error){
+  label:not(.Mui-error) {
     color: ${({ theme }) => theme.colors.primary} !important;
   }
 
@@ -105,4 +105,18 @@ export const Button = styled.button`
 
 export const LoadingComponent = styled(CircularProgress)`
   color: ${({ theme }) => theme.colors.secondary} !important;
+`;
+
+export const SectionImg = styled.div`
+  width: 35%;
+  z-index: 10;
+  transition: 0.5s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+
+  @media screen and (max-width: 1024px) {
+    display: none;
+  }
 `;
