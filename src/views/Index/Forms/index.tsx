@@ -204,7 +204,6 @@ export default function BasicTextFields() {
             name="name"
             value={forms.name}
             onChange={handleChange}
-            autoFocus
           />
           <InputComponent
             fullWidth
