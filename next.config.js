@@ -20,6 +20,10 @@ module.exports = {
     VERCEL_REDEPLOY_TOKEN: process.env.VERCEL_REDEPLOY_TOKEN,
     NOTION_ABOUT_DB_ID: process.env.NOTION_ABOUT_DB_ID,
     NOTION_FORMS_DB_ID: process.env.NOTION_FORMS_DB_ID,
+    GMAIL_USER: process.env.GMAIL_USER,
+    GMAIL_PASSWORD: process.env.GMAIL_PASSWORD,
+    GMAIL_RECIPIENT: process.env.GMAIL_RECIPIENT,
+    GMAIL_TOKEN: process.env.GMAIL_TOKEN,
   }
 }
 
