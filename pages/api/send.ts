@@ -3,9 +3,7 @@ import { NextApiRequest, NextApiResponse } from "next";
 const isDev = !process.env.AWS_REGION;
 
 const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 465,
-  secure: true,
+  host: process.env.SMTP_HOST,
   auth: {
     user: process.env.GMAIL_USER,
     pass: process.env.GMAIL_PASSWORD,

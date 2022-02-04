@@ -24,6 +24,7 @@ module.exports = {
     GMAIL_PASSWORD: process.env.GMAIL_PASSWORD,
     GMAIL_RECIPIENT: process.env.GMAIL_RECIPIENT,
     GMAIL_TOKEN: process.env.GMAIL_TOKEN,
+    SMTP_HOST: process.env.SMTP_HOST,
   }
 }
 
