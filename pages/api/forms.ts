@@ -19,10 +19,6 @@ export default async (
 
     const database_id = process.env.NOTION_FORMS_DB_ID;
 
-    if (!base_url) {
-      console.error("Missing environment variable: BASE_URL", req.headers.host);
-    }
-
     if (!database_id) {
       throw new Error("No database id provided");
     }

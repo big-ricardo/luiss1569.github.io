@@ -61,7 +61,8 @@ export default async (
       text,
       html,
     };
-    console.log("mailOptions",JSON.stringify(mailOptions));
+    console.log("GMAIL_USER", process.env.GMAIL_USER);
+    console.log("GMAIL_PASSWORD", process.env.GMAIL_PASSWORD);
 
     await transporter.sendMail(mailOptions, (err, info) => {
       if (err) {
