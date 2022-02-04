@@ -29,25 +29,25 @@ export default async (
       throw new Error("All fields are required");
     }
 
-    const protocol = isDev ? "http://" : "https://";
+    // const protocol = isDev ? "http://" : "https://";
 
-    axios
-      .post(
-        `${protocol}${req.headers.host}/api/send`,
-        {
-          name,
-          email,
-          message,
-        },
-        {
-          headers: {
-            token: process.env.GMAIL_TOKEN,
-          },
-        }
-      )
-      .catch((err) => {
-        throw new Error(err.message);
-      });
+    // axios
+    //   .post(
+    //     `${protocol}${req.headers.host}/api/send`,
+    //     {
+    //       name,
+    //       email,
+    //       message,
+    //     },
+    //     {
+    //       headers: {
+    //         token: process.env.GMAIL_TOKEN,
+    //       },
+    //     }
+    //   )
+    //   .catch((err) => {
+    //     throw new Error(err.message);
+    //   });
 
     const { id = null } = await notion.pages
       .create({
